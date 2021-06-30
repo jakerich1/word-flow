@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: $font-color;
+    font-family: 'Quicksand', sans-serif;   
+    transition: all 0.1s;
+}
+
+html, body{
+    height: 100%;
+}
+
+body{
+    background: $background-color;
+
+    .container{
+        height: 100%;
+        display: grid;
+        grid-template-columns: 2fr 4fr 4fr 2fr; 
+        grid-template-rows: auto 1fr;
+        grid-template-areas: 
+                    "head head head head"
+                    "left p1 p2 right";
+    }
+}

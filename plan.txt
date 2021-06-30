@@ -1,0 +1,28 @@
+controller module
+    get local storage
+    set local storage
+    renderResult
+
+DOM controller
+Event Listeners module
+
+Document class
+
+    content string
+    title
+    id
+    font-size
+
+    methods 
+
+        initID
+        wordCount
+        sentenceArray      //Split content into seperate sentences 
+        classify           //Takes in a sentence and classifies its length
+        parse              //this is the method which parses through the text and outputs the same text with individual sentences wrapped in color spans
+        summary            //summary is an object of below method results. e.g. number of sentence length results from content 
+        xsmall
+        small
+        medium
+        large
+        xlarge
