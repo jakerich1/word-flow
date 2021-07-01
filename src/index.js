@@ -5,6 +5,8 @@ import leftControl from './components/leftControl';
 import rightControl from './components/rightControl';
 import page1 from './components/page1';
 import page2 from './components/page2';
+import listener from './controllers/listener';
+import folder from './Class/folder';
 
 function component() {
 
@@ -21,3 +23,4 @@ function component() {
 }
 
 document.body.appendChild(component())
+listener.initializeListeners()

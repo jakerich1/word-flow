@@ -15,7 +15,7 @@ Document class
 
     methods 
 
-        initID
+        -----initID
         wordCount
         sentenceArray      //Split content into seperate sentences 
         classify           //Takes in a sentence and classifies its length

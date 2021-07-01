@@ -1,3 +1,20 @@
 #page2{
-    
+
+    padding-bottom: 2em;
+
+    #page2-content{
+        height: 100%;
+        background-color: $font-color;
+        border: 3px solid $font-color;
+        padding: 1em;
+
+        p{
+            font-family: 'Roboto', sans-serif;
+            color: $background-color;
+            line-height: 190%;
+            letter-spacing: 10%;
+            font-size: 15px;
+        }
+    }
+
 }

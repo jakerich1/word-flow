@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     color: $font-color;
-    font-family: 'Quicksand', sans-serif;   
+    font-family: 'Roboto', sans-serif;  
     transition: all 0.1s;
 }
 
@@ -22,5 +22,6 @@ body{
         grid-template-areas: 
                     "head head head head"
                     "left p1 p2 right";
+        grid-gap: 1em;
     }
 }

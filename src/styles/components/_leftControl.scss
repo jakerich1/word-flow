@@ -1,0 +1,122 @@
+#left-Control {
+    padding: 1em;
+    padding-top: 0;
+
+    .header-cont {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid white;
+
+        h2 {
+            font-family: 'Libre Baskerville', serif;
+            color: $font-color;
+            font-weight: 400;
+            font-size: 22px;
+        }
+
+        .add-doc-cont {
+            border-radius: 50%;
+            padding: 3px;
+            margin-bottom: 3px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #333333;
+            }
+
+            svg {
+                display: block;
+                stroke-width: 1px;
+                height: 30px;
+                width: auto;
+
+                &:hover {
+                    stroke: $primary-color;
+                }
+            }
+        }
+    }
+
+    #doc-area {
+        padding: 1em 0;
+
+        &>* {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1em;
+            border-radius: 8px;
+            background-color: #333333;
+            color: $font-color;
+            cursor: pointer;
+            
+            @keyframes fadeIn {
+                0% {
+                    filter: opacity(0);
+                }
+
+                100% {
+                    filter: opacity(1);
+                }
+            }
+
+            &:hover {
+                background-color: #525252;
+            }
+
+            &:hover > .delete{
+                animation: 0.5s ease-out 0s 1 slideIn forwards;
+                
+            }
+
+            .details{
+                padding: 1em;
+
+                .doc-title{
+                    margin-bottom: 1em;
+                    padding: 4px;
+                    border-radius: 4px;
+                    font-family: 'Roboto', sans-serif;  
+                    font-size: 16px;
+                    background: #525252;
+                    border: none;
+
+                    &:focus{
+                        outline: 1px solid $primary-color;
+                    }
+                }
+            }
+
+            .delete{
+                display: flex;
+                align-items: center;
+                border-top-right-radius: 8px;
+                border-bottom-right-radius: 8px;
+                background-color: $danger-color;
+                transform-origin: 100% 50%;
+                transform: scaleX(0);
+
+                @keyframes slideIn {
+                    0% {
+                        transform: scaleX(0);
+                    }
+    
+                    100% {
+                        transform: scaleX(1);
+                    }
+                }
+
+                &:hover{
+                    filter: brightness(0.7);
+                }
+                
+                svg{
+                    display: block;
+                    stroke-width: 1px;
+                    height: 30px;
+                    width: auto;
+                }
+            }
+        }
+    }
+}
