@@ -7,6 +7,7 @@ import page1 from './components/page1';
 import page2 from './components/page2';
 import listener from './controllers/listener';
 import folder from './Class/folder';
+import controller from './controllers/controller';
 
 function component() {
 
@@ -24,3 +25,4 @@ function component() {
 
 document.body.appendChild(component())
 listener.initializeListeners()
+controller.getLocal()

@@ -11,9 +11,14 @@ const DOMcontrol = (function listeners() {
         documentObj.forEach((element, key) => {
           
             const docCont = document.createElement('div')
+            docCont.classList.add('docBtn')
+
+            if (folder.isActive(element.id)) {
+                docCont.style.outline = '1px solid #61c5ff'
+            }
 
             const details = document.createElement('div')
-            details.classList.add('details')
+            details.classList.add('doc-details')
 
             const docTitle = document.createElement('input')
             docTitle.value = element.title
@@ -43,8 +48,31 @@ const DOMcontrol = (function listeners() {
 
     }
 
+    function setActiveDoc() {
+        
+        const docBtns = document.querySelectorAll('.docBtn')
+        docBtns.forEach((element, key) => {
+            if (key == folder.getActiveKey()) {
+                element.style.outline = '1px solid #61c5ff'
+            }else{
+                element.style.outline = 'none'
+            }
+        })
 
-    return { showDocs: showDocs, }
+    }
+
+    function textAreaContent() {
+
+        const textArea = document.querySelector('#main-input')
+        textArea.value = folder.docs[folder.getActiveKey()].content
+
+    }
+
+    return { 
+        showDocs: showDocs, 
+        setActiveDoc: setActiveDoc,
+        textAreaContent: textAreaContent
+    }
 
 }())
 

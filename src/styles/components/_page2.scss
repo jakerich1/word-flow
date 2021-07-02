@@ -14,6 +14,28 @@
             line-height: 190%;
             letter-spacing: 10%;
             font-size: 15px;
+            margin-bottom: 1em;
+
+            span{
+                color: $background-color;
+                margin-right: 0.5em;
+            }
+
+            .vShort{
+                background: #ffff92;
+            }
+            .short{
+                background: #dd92ff;
+            }
+            .medium{
+                background: #92ffa1;
+            }
+            .long{
+                background: #92e0ff;
+            }
+            .vLong{
+                background: #ff9292;
+            }
         }
     }
 
